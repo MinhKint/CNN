@@ -7,7 +7,7 @@ Inception is a famous convolutional neural network (CNN) architecture developed 
 ### 1. Architecture:
 
 <img><\img>
-![image](["C:\D\Github\CNN\Inception\Inception v1\Image\Architecture.png"](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Image/Architecture.png))
+![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Image/Architecture.png)
 
 ### 2. Key features of the Inception model:**
 
