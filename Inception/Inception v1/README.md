@@ -34,7 +34,7 @@ Inception is a famous convolutional neural network (CNN) architecture developed 
 
 ![Training Results](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Image/result.png)
 
-### 2. Note: 
+### 2. Comment: 
 
 - **Valid Accuracy** Reached 0.9 after 10 epochs.
 - **Epoch 25:** The model reached an accuracy of 0.94, demonstrating the effectiveness of the improvements.
@@ -42,3 +42,6 @@ Inception is a famous convolutional neural network (CNN) architecture developed 
 # IV. Reference code:
 
 - **Jupyter Notebook:** [Inception v1.ipynb](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Inception%20v1.ipynb)
+- **Notion:**
+  - Since Inception V1 uses 2 more Auxiliary Classifiers, there will be 2 more auxiliary outputs: 'output_2_accuracy' and 'output_3_accuracy
+  - The loss function will affect all 3 outputs (Main Output + 2 Auxiliary Classifiers) by setting the weights in the optimizier
