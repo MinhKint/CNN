@@ -1,6 +1,6 @@
 # I. Version
 
-### **1. Versions:**
+### **1. Base:**
 
 - **Inception v1 (GoogLeNet):**
   - Architecture: 22 layers (including Inception modules). Uses 1x1, 3x3, and 5x5 filters in the Inception module, and adds the Auxiliary Classifiers technique.
