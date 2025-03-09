@@ -32,7 +32,7 @@ Inception is a famous convolutional neural network (CNN) architecture developed 
 
 ### 1. Loss and accuracy: 
 
-![Training Results]("C:\D\Github\CNN\Inception\Inception v1\Image\result.png")
+![Training Results](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Image/result.png)
 
 ### 2. Nhận xét: 
 
