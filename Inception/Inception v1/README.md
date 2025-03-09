@@ -34,11 +34,11 @@ Inception is a famous convolutional neural network (CNN) architecture developed 
 
 ![Training Results](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Image/result.png)
 
-### 2. Nhận xét: 
+### 2. Note: 
 
 - **Valid Accuracy** Reached 0.9 after 10 epochs.
 - **Epoch 25:** The model reached an accuracy of 0.94, demonstrating the effectiveness of the improvements.
 
 # IV. Reference code:
 
-- **Jupyter Notebook:** [Inception v1.ipynb]("C:\D\Github\CNN\Inception\Inception v1\Inception v1.ipynb")
+- **Jupyter Notebook:** [Inception v1.ipynb](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v1/Inception%20v1.ipynb)
