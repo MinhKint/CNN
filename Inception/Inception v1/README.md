@@ -37,7 +37,7 @@ Inception is a famous convolutional neural network (CNN) architecture developed 
 ### 2. Comment: 
 
 - **Valid Accuracy** Reached 0.9 after 10 epochs.
-- **Epoch 25:** The model reached an accuracy of 0.94, demonstrating the effectiveness of the improvements.
+- **Epoch 25:** The model reached an accuracy of 0.94 val accuracy, demonstrating the effectiveness of the improvements.
 
 # IV. Reference code:
 

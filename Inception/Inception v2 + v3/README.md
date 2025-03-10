@@ -1,44 +1,13 @@
-# I. Introduction
+# I. Why an improved version is needed
 
-Inception is a famous convolutional neural network (CNN) architecture developed by Google in 2014 in the paper "Going Deeper with Convolutions" and used in the Inception-v1 model, also known as GoogLeNet. 
+While Inception V1 brought many performance improvements, it also had some major limitations. The most notable one was that the model size and computational cost increased rapidly as the network expanded. If we simply wanted to increase the accuracy by increasing the filter size, this would result in a disproportionate increase in computational cost and parameter count (~4x), with only modest benefits in many cases. This is not reasonable in a practical context, where computational efficiency and low parameter count are still factors supporting many different use cases such as mobile phones and big data.
 
-# II. Model structure
+So inception v2 and v3 were born to answer the question of ‘how to scale neural networks without increasing computational cost unreasonably’ by using new optimization techniques, such as factorized convolutions 
 
-### 1. Architecture:
+# II. Inception v2 v3 architectural issues that the paper does not explicitly address
 
-![Inception v1 Architecture]("C:\D\Github\CNN\Inception\Inception v1\Image\Architecture.png")
+- **Inception modules do not specify the number of kernels:** For example, with Inception modules from figure 5, 6, 4 kernel number values ​​are needed corresponding to 4 branches in each module. This makes the paper reader need to test the kernel value combinations: Are these 4 values ​​equal or different? If different, how much is the difference and is it much different from the 1x1 convolution? - Input size in the transfer between Inception modules: Example with input size for 3 Inception modules figure 5. Because the paper mentions the use of Grid Size Reduction to transfer the size and number of features between Inception modules figure 5 and figure 6; between Inception module figure 6 and figure 7. Therefore, the reader is not sure whether all 3 Inception modules in figure have 2 modules that still keep the input size of 35 x 35 x288 or all 3 more
+- **Unclear about pooling:** The paper mentions that the reader can freely use between max pooling or average pooling in each Inception module and in the Grid Size Reduction section
+- **Unclear in the classification between Inception v3 and v2:** The paper says that the best version of Inception v2 (using Batch Normalization in the Auxiliary port) is Inception v3. And the reader is not sure whether Batch Normalization is only implemented in the auxiliary port or after all convolution layers because the reader sees a lot of reference code on the internet (including Inception v3 in tensorflow using Batch Normalization after each convolution layer)
 
-### 2. Key features of the Inception model:**
-
-- **Inception Modules:**
-  - The Inception module is a basic block of the Inception network, allowing transformations with different filter sizes (1x1, 3x3, 5x5) to be performed in parallel.
-  - Multi-scale processing: The use of different filter sizes (multi-scale) helps the network capture both small detailed features (with small filters like 1x1) and larger, more comprehensive features (with larger filters like 5x5).
-  - The results are then concatenated into a single tensor. This allows the neural network to capture features at different levels of detail simultaneously.
-  - Each Inception module also includes pooling layers (max pooling) to reduce size and increase computational efficiency.
-
-- **Reduction in Computational Cost:**
-  - The use of 1x1 filters helps reduce the number of parameters and computations compared to larger filters.
-  - 1x1 transformations not only reduce the number of parameters but also enhance the non-linearity of the network (Increase non-linearity because each 1x1 transformation is followed by a non-linear activation function (such as ReLU)). 
-
-- **Grid Size Reduction:**
-  - Inception often reduces the output size after a certain number of layers by using pooling or convolution layers with stride > 1.
-  - This size reduction helps keep the network from becoming too large and difficult to train.
-
-- **Auxiliary Classifiers:** The Inception model uses auxiliary classifiers during training. These classifiers are attached in the middle of the network layers and help provide additional training signals. This helps improve gradient flow and allows the network to learn faster and more efficiently.
-- **Deep architecture:** The Inception model is very deep and complex, with many layers and consecutive Inception modules. This allows it to learn complex features from input data.
-- **Batch Normalization:** Batch normalization is applied to stabilize and accelerate the training process. This helps the model learn more efficiently and reduces the risk of overfitting.
-
-# III. Experimental results:
-
-### 1. Loss and accuracy: 
-
-![Training Results]("C:\D\Github\CNN\Inception\Inception v1\Image\result.png")
-
-### 2. Nhận xét: 
-
-- **Valid Accuracy** Reached 0.9 after 10 epochs.
-- **Epoch 25:** The model reached an accuracy of 0.94, demonstrating the effectiveness of the improvements.
-
-# IV. Reference code:
-
-- **Jupyter Notebook:** [Inception v1.ipynb]("C:\D\Github\CNN\Inception\Inception v1\Inception v1.ipynb")
+- **In summary:** I feel that the author of the paper made a mistake or an omission, which led to misunderstanding and difficulty in reading the paper.
