@@ -6,9 +6,17 @@ The Inception V2 and V3 architectures are further improvements to the Inception 
 
 ### 1. Architecture:
 
-| ![image](https://github.com/n1ne1903/Pomodoro-with-camera-detect-distracted/assets/141629048/32c5e64d-b9fc-4673-8dae-ca97404ff03c) | ![image](https://github.com/n1ne1903/Pomodoro-with-camera-detect-distracted/assets/141629048/4e9fe3ee-7a88-4155-9187-08d57ba6bd7f) | ![image](https://github.com/n1ne1903/Pomodoro-with-camera-detect-distracted/assets/141629048/f158813d-6612-4343-a583-240915035202) |
+| ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Figure%205.png) | ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Figure%206.png) | ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Figure%207.png) |
 |:------------------------------:|:------------------------------:|:------------------------------:|
-| Figure 5              | Figure 6             | Figure 7            |
+| Inception_F5 module  | Inception_F6 module  | Inception_F7 module  |
+
+| ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Figure%208.png) | ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Figure%2010.png)| ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Figure%209.png) |
+|:------------------------------:|:------------------------------:|:------------------------------:|
+| After Inception_F6 modul  | Each time the module changes size  | Two basic other ways  |
+
+![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Architecture%20%2B%20Layer%20Inception%20v2.png) ![image](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/Architecture%20%2B%20Layer%20Inception%20v3.png)
+
+**Note:** Inception V3 is the version that uses additional Label Smoothing and Batch Normalization
 
 ### 2. Key features of the Inception model:**
 
@@ -29,10 +37,9 @@ The Inception V2 and V3 architectures are further improvements to the Inception 
 - **Epoch 25:** The model achieved an accuracy of 0.8 val accuracy, although it had previously achieved 0.94 at epoch 24.
 - **Analysis:** I also don't know why there is this instability. Personal opinion: The explanation for this may be partly due to Label Smoothing making the model less certain about the prediction results.
 
-
 # IV. Reference code:
 
-- **Jupyter Notebook:** [Inception v1.ipynb]("C:\D\My Github\CNN\Inception\Inception v2 + v3\Inception v3\Inception v3.ipynb")
+- **Jupyter Notebook:** [Inception v1.ipynb](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Inception%20v3/Inception%20v3.ipynb)
 - **Notion:**
   - Since Inception V2 uses 1 more Auxiliary Classifiers, there will be 1 more auxiliary outputs: 'output_2_accuracy'
   - The loss function will affect all 2 outputs (Main Output + Auxiliary Classifiers) by setting the weights in the optimizier
