@@ -40,7 +40,7 @@ The Inception V2 and V3 architectures are further improvements to the Inception 
 
 # IV. Reference code:
 
-- **Jupyter Notebook:** [Inception v2.ipynb]("C:\D\My Github\CNN\Inception\Inception v2 + v3\Inception v2\Inception v2.ipynb")
+- **Jupyter Notebook:** [Inception v2.ipynb](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Inception%20v2/Inception%20v2.ipynb)
 - **Notion:**
   - Since Inception V2 uses 1 more Auxiliary Classifiers, there will be 1 more auxiliary outputs: 'output_2_accuracy'
   - The loss function will affect all 2 outputs (Main Output + Auxiliary Classifiers) by setting the weights in the optimizier
