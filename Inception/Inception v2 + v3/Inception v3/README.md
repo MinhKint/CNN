@@ -29,7 +29,7 @@ The Inception V2 and V3 architectures are further improvements to the Inception 
 
 ### 1. Loss and accuracy: 
 
-![Training Results]("C:\D\My Github\CNN\Inception\Inception v2 + v3\Image\result_v3.png")
+![Training Results](https://github.com/MinhKint/CNN/blob/main/Inception/Inception%20v2%20%2B%20v3/Image/result_v3.png)
 
 ### 2. Comment: 
 
